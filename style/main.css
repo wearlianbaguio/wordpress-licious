@@ -1043,6 +1043,8 @@ img {
 .blogBanner__content img {
   border-radius: 2rem;
   margin-top: 3rem;
+  height: 50%;
+  width: 80%;
 }
 .blogBanner__content h3 {
   font-size: 1.8rem;
@@ -1282,7 +1284,7 @@ img {
 }
 
 .homeAbout {
-  background-image: url(../../desilicious/IMG/about.png);
+  background-image: url(../img/about.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1315,22 +1317,23 @@ img {
   font-family: "Cookie", cursive;
 }
 .homeMenulist__wrapper {
+  max-width: 70%;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  justify-items: center;
+  column-gap: 7rem;
 }
-.homeMenulist__food ul {
+.menuList_food ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.homeMenulist__food ul li {
+.menuList_food ul li {
   color: #dd1d01;
   font-size: 1.5rem;
   font-weight: 500;
 }
-.homeMenulist__food p {
+.menuList_food p {
   margin-bottom: 2rem;
 }
 
@@ -1343,7 +1346,7 @@ img {
   align-items: center;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../desilicious/IMG/book\ a\ table\ bg.jpg);
+    url(../img/book\ a\ table\ bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1516,7 +1519,6 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  justify-items: center;
 }
 .menuList__food ul {
   display: flex;
@@ -1705,6 +1707,7 @@ img {
   font-size: clamp(40px, 8vw, 120px);
   text-align: center;
   margin: 5rem 0;
+  text-transform: capitalize;
 }
 
 .food_wrapper {
@@ -1730,4 +1733,40 @@ img {
   object-fit: cover;
   width: 15rem;
   height: 15rem;
+}
+
+.food_item img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.homeMenulist__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.menu__food__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 22rem;
+  max-width: 75%;
+  margin: 0 auto 3rem;
+  width: 100%;
+}
+
+.menu__food__griditem ul {
+  display: flex;
+  justify-content: space-between;
+  color: #dd1d01;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.productBanner__card img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desilicious</title>
+    <title><?php is_front_page() ? blogInfo('title') : wp_title('')?></title>
     <?php wp_head()?>
     <!-- <link rel="stylesheet" href="./dist/css/main.min.css" /> -->
     <link
@@ -20,18 +20,16 @@
     <header class="header bg--dark">
       <div class="container">
         <div class="header__wrapper">
-          <a href="./home.html" class="header__logo"
-            ><img src="./desilicious/IMG/81240106-logo1.png" alt=""
-          /></a>
+
+            <?php if(function_exists('the_custom_logo')) {
+              the_custom_logo();
+            }?>
+       
           <nav>
-            <ul class="header__nav">
-              <li><a href="./home.html">Home</a></li>
-              <li><a href="./menu.html">Menu</a></li>
-              <li><a href="./chef.html">Chef</a></li>
-              <li><a href="./product.html">Product</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-            </ul>
+            <?php wp_nav_menu(array(
+                'theme_location' => 'header_menu',
+                'menu_class' => 'header__nav'
+            ))?>
           </nav>
           <div class="toggle__menu">
             <span></span>
