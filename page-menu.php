@@ -10,7 +10,7 @@
             </div>
             <?php $beef = new WP_Query(array (
                     'post_type' => 'menus',
-                    'posts_per_page' => -1,
+                    'posts_per_page' => 1,
                     'meta_key' => "Grouping",
                     'meta_value' => "Beef",
                 ))?>

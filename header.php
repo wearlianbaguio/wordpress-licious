@@ -30,6 +30,11 @@
                 'theme_location' => 'header_menu',
                 'menu_class' => 'header__nav'
             ))?>
+
+            <div class="header-cart">
+                <span>3</span>
+                    <button id="btnCart"><i class="fas fa-shopping-cart"></i></button>
+            </div>
           </nav>
           <div class="toggle__menu">
             <span></span>
